@@ -1,6 +1,4 @@
-package test.scratch;
-
-import org.testng.annotations.Test;
+package test.sketch;
 
 import java.util.Scanner;
 

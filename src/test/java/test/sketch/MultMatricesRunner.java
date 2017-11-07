@@ -1,4 +1,4 @@
-package test.scratch;
+package test.sketch;
 
 public class MultMatricesRunner {
 

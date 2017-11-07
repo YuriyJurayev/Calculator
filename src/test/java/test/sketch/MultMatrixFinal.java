@@ -1,4 +1,4 @@
-package test.scratch;
+package test.sketch;
 
 import java.util.Scanner;
 
