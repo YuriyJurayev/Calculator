@@ -24,7 +24,7 @@ public class MultMatrices {
     }
 
     public void printMatrix(int[][] matrix) {
-        if (matrix.length != 0) {               ///if matrix is not empty,then print it, else print matrix is empty
+        if (matrix.length != 0) {
             int rows = matrix.length;
             int elements = matrix[0].length;
             System.out.println("Matrix [" + rows + "][" + elements + "]: ");
@@ -41,10 +41,10 @@ public class MultMatrices {
     }
 
     public int[][] multMatrices(int[][]matrixA,int[][]matrixB){
-        if (matrixA.length == 0){               ///if first matrix is empty,then return empty result
+        if (matrixA.length == 0){
             return new int[0][0];
         }
-        if (matrixA[0].length != matrixB.length){   ///if not equal,then invalid dimension
+        if (matrixA[0].length != matrixB.length){
             return null;
         }
         int rA = matrixA.length;
