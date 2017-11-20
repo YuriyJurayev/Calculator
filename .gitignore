@@ -1,6 +1,6 @@
 # IDEA
 .idea/*
-CalculatorUnitTestingTestNG.iml
+Calculator.iml
 /target/
 /bin/
 .idea/workspace.xml
@@ -10,7 +10,6 @@ CalculatorUnitTestingTestNG.iml
 
 # Log file
 *.log
-
 
 
 # Package Files #
