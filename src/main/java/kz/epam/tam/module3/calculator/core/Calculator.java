@@ -1,4 +1,4 @@
-package kz.epam.tam.module3.calculator;
+package kz.epam.tam.module3.calculator.core;
 
 public class Calculator {
 
@@ -13,7 +13,6 @@ public class Calculator {
     public int mult(int a, int b){
         return a * b;
     }
-
     public int div(int a, int b){
         return a / b;
     }
