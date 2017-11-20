@@ -1,23 +1,27 @@
 package kz.epam.tam.module3.matrixmultiplication.runner;
 
-import kz.epam.tam.module3.matrixmultiplication.MultMatrices;
+import kz.epam.tam.module3.matrixmultiplication.core.MatrixFiller;
+import kz.epam.tam.module3.matrixmultiplication.core.MatrixMultiplicator;
+import kz.epam.tam.module3.matrixmultiplication.core.MatrixPrinter;
 
 public class Runner {
     public static void main (String[] arg) {
 
-        MultMatrices multMatrix = new MultMatrices();
-        int [][] matrixA = multMatrix.fillMatrix();
-        int [][] matrixB = multMatrix.fillMatrix();
-        int [][] matrixC = multMatrix.multMatrices(matrixA,matrixB);
+        MatrixFiller filler = new MatrixFiller();
+        MatrixMultiplicator multiplicator = new MatrixMultiplicator();
+        MatrixPrinter printer = new MatrixPrinter();
+        int [][] matrixA = filler.fillMatrix();
+        int [][] matrixB = filler.fillMatrix();
+        int [][] matrixC = multiplicator.multMatrices(matrixA,matrixB);
         if(matrixC != null) {
-            multMatrix.printMatrix(matrixA);
-            multMatrix.printMatrix(matrixB);
-            multMatrix.printMatrix(matrixC);
+            printer.printMatrix(matrixA);
+            printer.printMatrix(matrixB);
+            printer.printMatrix(matrixC);
         }
         else{
             System.out.println("Invalid dimension of:");
-            multMatrix.printMatrix(matrixA);
-            multMatrix.printMatrix(matrixB);
+            printer.printMatrix(matrixA);
+            printer.printMatrix(matrixB);
         }
     }
 }
