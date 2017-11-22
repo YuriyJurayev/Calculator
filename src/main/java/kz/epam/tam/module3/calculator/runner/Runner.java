@@ -1,44 +1,42 @@
 package kz.epam.tam.module3.calculator.runner;
 
+import kz.epam.tam.module3.calculator.core.Calculator;
 import kz.epam.tam.module3.calculator.utils.*;
 
 public class Runner {
 
     public static void main(String[] args) {
         boolean calculation = true;
-        System.out.println("Calculator is started!");
-
+        int proceedOrExit = 1;
+        Logger.printCalcStatus(proceedOrExit);
         while (calculation) {
-            MenuHelper menu = new MenuHelper();
-            int proceedOrExit = menu.pickProceedOrExit();
+            Logger.printProceedMenu();
+            proceedOrExit = Reader.readData();
             if (proceedOrExit == 1) {
-                int operationType = menu.pickOne();
+                Logger.printMainMenu();
+                int operationType =  Reader.readData();
                 switch (operationType) {
                     case 1:
-                        SumHelper sumHelper = new SumHelper();
-                        sumHelper.sum();
+                        CalcHelper.executeCalcOperation(operationType);
                         break;
                     case 2:
-                        SubHelper subHelper = new SubHelper();
-                        subHelper.substraction();
+                        CalcHelper.executeCalcOperation(operationType);
                         break;
                     case 3:
-                        MultHelper multHelper = new MultHelper();
-                        multHelper.multiplication();
+                        CalcHelper.executeCalcOperation(operationType);
                         break;
                     case 4:
-                        DivHelper divHelper = new DivHelper();
-                        divHelper.division();
+                        CalcHelper.executeCalcOperation(operationType);
                         break;
                     default:
-                        System.out.println("Incorrect value! Please, try again");
+                        Logger.printError();
                         break;
                 }
             } else if (proceedOrExit == 2) {
                 calculation = false;
-                System.out.println("Calculator is closed!");
+                Logger.printCalcStatus(proceedOrExit);
             } else {
-                System.out.println("Incorrect value! Please, try again");
+                Logger.printError();
             }
         }
     }
