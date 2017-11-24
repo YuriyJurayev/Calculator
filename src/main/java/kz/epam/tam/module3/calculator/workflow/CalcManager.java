@@ -27,17 +27,6 @@ public class CalcManager {
                     CalcPrinter.printError();
                     break;
             }
-            /*if (proceedOrExit == 1) {
-                CalcPrinter.printMainMenu();
-                int operationType = KeyboardReader.readInt();
-                executor.executeCalcOperation(operationType);
-            } else if (proceedOrExit == 2) {
-                calculation = false;
-                CalcPrinter.printCalcStatus(proceedOrExit);
-            } else {
-                CalcPrinter.printError();
-            }*/
-
         }
     }
 }
