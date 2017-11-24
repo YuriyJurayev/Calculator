@@ -3,21 +3,18 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class KeyboardReader {
-
     private static Scanner scanner = new Scanner(System.in);
 
     public static int readInt() {
-        boolean isInputIncorrect = true;
-        int number =0;
-        while (isInputIncorrect){
+        while (true) {
             try {
-                number = scanner.nextInt();
-                isInputIncorrect = false;
-            }catch (InputMismatchException e){
+                return scanner.nextInt();
+            } catch (InputMismatchException e) {
                 CalcPrinter.printError();
                 scanner.nextLine();
             }
         }
-        return number;
     }
 }
+
+
