@@ -1,6 +1,6 @@
 package kz.epam.tam.module3.calculator.utils;
 
-public class Logger {
+public class CalcPrinter {
 
     private static final String PROCEED_MENU = "Would you like to Proceed?\n" +
                                                 "1 - Proceed \n" +
@@ -17,10 +17,10 @@ public class Logger {
     public static void printMainMenu(){
         System.out.println(MAIN_MENU);
     }
-    static void printNumberSequence(String num){
+    public static void printNumberSequence(String num){
         System.out.println("Please enter the "+ num + " number!");
     }
-    static void printResult(int number1,int number2,String operator,int operation){
+    public static void printResult(int number1,int number2,String operator,int operation){
         System.out.println("Result: " + number1 + operator + number2 + " = " + operation);
     }
     public static void printCalcStatus(int proceedOrExit){
