@@ -13,32 +13,30 @@ public class CalcManager {
         while (calculation) {
             CalcPrinter.printProceedMenu();
             proceedOrExit = KeyboardReader.readInt();
-            if (proceedOrExit == 1) {
+            switch (proceedOrExit) {
+                case 1:
+                    CalcPrinter.printMainMenu();
+                    int operationType = KeyboardReader.readInt();
+                    executor.executeCalcOperation(operationType);
+                    break;
+                case 2:
+                    calculation = false;
+                    CalcPrinter.printCalcStatus(proceedOrExit);
+                    break;
+                default:
+                    CalcPrinter.printError();
+                    break;
+            }
+            /*if (proceedOrExit == 1) {
                 CalcPrinter.printMainMenu();
                 int operationType = KeyboardReader.readInt();
-                switch (operationType) {
-                    case 1:
-                        executor.executeCalcOperation(operationType);
-                        break;
-                    case 2:
-                        executor.executeCalcOperation(operationType);
-                        break;
-                    case 3:
-                        executor.executeCalcOperation(operationType);
-                        break;
-                    case 4:
-                        executor.executeCalcOperation(operationType);
-                        break;
-                    default:
-                        CalcPrinter.printError();
-                        break;
-                }
+                executor.executeCalcOperation(operationType);
             } else if (proceedOrExit == 2) {
                 calculation = false;
                 CalcPrinter.printCalcStatus(proceedOrExit);
             } else {
                 CalcPrinter.printError();
-            }
+            }*/
 
         }
     }
