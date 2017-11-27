@@ -1,5 +1,7 @@
 package kz.epam.tam.module3.calculator.core;
 
+import kz.epam.tam.module3.calculator.utils.CalcPrinter;
+
 public class Calculator {
 
     public final String SUM_OPERATOR = " + ";
@@ -17,6 +19,12 @@ public class Calculator {
         return a * b;
     }
     public int div(int a, int b){
-        return a / b;
+        int division = 0;
+        try{
+            division = a / b;
+        }catch (ArithmeticException e){
+            CalcPrinter.printError(e.getMessage());
+        }
+        return division;
     }
 }
