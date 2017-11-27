@@ -10,7 +10,7 @@ public class KeyboardReader {
             try {
                 return scanner.nextInt();
             } catch (InputMismatchException e) {
-                CalcPrinter.printError();
+                CalcPrinter.printError("Incorrect value! Please, try again.");
                 scanner.nextLine();
             }
         }
