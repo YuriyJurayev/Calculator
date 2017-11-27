@@ -33,7 +33,7 @@ public class CalcPrinter {
         }
         System.out.println("Calculator is "+ startOrClose +"!");
     }
-    public static void printError(){
-        System.out.println("Incorrect value! Please, try again.");
+    public static void printError(String error){
+        System.out.println(error);
     }
 }
